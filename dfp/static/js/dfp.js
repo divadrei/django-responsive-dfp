@@ -24,7 +24,7 @@ $(window).load(function() {
 
         slot = '/' + $(this).data('account') + '/' + $(this).data('slot')
         
-        $('.dfp-ads>div').each(function() {
+        $(this).children("div").each(function() {
           if (typeof($(this).attr('id')) === 'undefined') {
             $(this).attr('id', 'ads-dfp-' + ads_index);
             ads_index++;

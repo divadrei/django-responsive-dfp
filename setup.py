@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import sys, os
 
 setup(name='django-responsive-dfp',
-      version="0.1.2.1",
+      version="0.1.2.2",
       description="Responsive ads using mediaquery for dfp.",
       long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
       classifiers=[

@@ -13,7 +13,7 @@ $(window).load(function() {
 
         } else {
           targeting[$(this).data('dfpfield')] = $(this)
-            .data('dfpvalue');
+            .data('dfpvalue').split('|');
         }
       });
       $('.dfp-ads').each(function() {

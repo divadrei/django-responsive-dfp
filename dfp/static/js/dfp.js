@@ -46,10 +46,13 @@ $(window).load(function() {
             googletag.pubads().setTargeting(key, value)
           });
           $.data($(this), 'dfp_init', false);
+          $(this).wrap('<div></div>');
+          var wrapper = $(this).parent();
+          $(wrapper).hide();
           var self = this;
           enquire.register(media_query, {
             match : function() {
-              $(self).show();
+              $(wrapper).show();
               if ($.data($(self), 'dfp_init') === true) {
                 return;
               }
@@ -58,7 +61,7 @@ $(window).load(function() {
               
             },
             unmatch: function() {
-              $(self).hide();
+              $(wrapper).hide();
             }
           });
         });
